@@ -1,0 +1,22 @@
+<table class="table mt-5">
+	<thead>
+		<tr>
+			<th scope="col" *ngFor="let column of columns">
+				{{ column.label }}
+			</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr *ngFor="let entry of entriesList">
+			<td>{{ entry.lp }}</td>
+			<td>{{ entry.name }}</td>
+			<td>{{ entry.surname }}</td>
+			<td>{{ entry.class }}</td>
+			<td>{{ entry.grade }}</td>
+			<td>
+				<button class="btn btn-info">Edytuj</button>
+				<button class="btn btn-danger mx-3">Usuń</button>
+			</td>
+		</tr>
+	</tbody>
+</table>
