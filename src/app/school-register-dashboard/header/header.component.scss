@@ -1,9 +1,11 @@
-.header-container {
-  display: flex;
-  justify-content: space-between;
-  padding: 50px;
+.header-content {
+  padding: 20px;
 
-  @media (min-width: 501px) {
-    padding: 80px;
+  @media (min-width: 500px) {
+    padding: 40px;
+  }
+
+  .title {
+    color: #354435;
   }
 }
