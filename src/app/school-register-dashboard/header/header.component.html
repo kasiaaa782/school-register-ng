@@ -2,9 +2,15 @@
 	<div class="container-fluid">
 		<h2>Elektorniczny dziennik szkolny</h2>
 		<div class="d-flex">
-			<button class="btn btn-success" (click)="addEntry()">
+			<button
+				type="button"
+				class="btn btn-success"
+				data-bs-toggle="modal"
+				data-bs-target="#addEntryModal"
+			>
 				Dodaj Wpis
 			</button>
 		</div>
 	</div>
 </div>
+<app-add-entry-modal></app-add-entry-modal>
