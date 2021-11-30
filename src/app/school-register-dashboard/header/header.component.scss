@@ -1,11 +1,7 @@
 .header-content {
-  padding: 20px;
+	padding: 20px;
 
-  @media (min-width: 500px) {
-    padding: 40px;
-  }
-
-  .title {
-    color: #354435;
-  }
+	@media (min-width: 500px) {
+		padding: 40px;
+	}
 }
