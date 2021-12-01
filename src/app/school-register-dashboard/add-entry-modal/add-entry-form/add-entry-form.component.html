@@ -1,18 +1,38 @@
-<form>
+<form [formGroup]="formValue" class="p-2">
 	<div class="mb-3">
-		<label for="nameInput" class="form-label">Imię ucznia</label>
-		<input type="text" class="form-control" id="nameInput" />
+		<label for="firstNameInput" class="form-label">Imię ucznia</label>
+		<input
+			type="text"
+			formControlName="firstName"
+			class="form-control"
+			id="firstNameInput"
+		/>
 	</div>
 	<div class="mb-3">
-		<label for="surnameInput" class="form-label">Nazwisko ucznia</label>
-		<input type="text" class="form-control" id="surnameInput" />
+		<label for="lastNameInput" class="form-label">Nazwisko ucznia</label>
+		<input
+			type="text"
+			formControlName="lastName"
+			class="form-control"
+			id="lastNameInput"
+		/>
 	</div>
 	<div class="mb-3">
 		<label for="classInput" class="form-label">Klasa</label>
-		<input type="text" class="form-control" id="classInput" />
+		<input
+			type="text"
+			formControlName="class"
+			class="form-control"
+			id="classInput"
+		/>
 	</div>
 	<div class="mb-3">
 		<label for="gradeInput" class="form-label">Ocena</label>
-		<input type="text" class="form-control" id="gradeInput" />
+		<input
+			type="text"
+			formControlName="grade"
+			class="form-control"
+			id="gradeInput"
+		/>
 	</div>
 </form>

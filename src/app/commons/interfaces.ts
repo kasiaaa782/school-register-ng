@@ -3,10 +3,10 @@ export interface Column {
 }
 
 export interface Entry {
-  uuid: string;
+	uuid: string;
 	lp: string;
-  name: string;
-  surname: string;
-  class: string;
-  grade: string;
+	firstName: string;
+	lastName: string;
+	class: string;
+	grade: string;
 }
