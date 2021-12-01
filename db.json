@@ -11,6 +11,41 @@
       "lastName": "Kowalska",
       "class": "5a",
       "grade": "5"
+    },
+    {
+      "id": 3,
+      "firstName": "Piotr",
+      "lastName": "Nowak",
+      "class": "5a",
+      "grade": "4,5"
+    },
+    {
+      "id": 4,
+      "firstName": "",
+      "lastName": "",
+      "class": "",
+      "grade": ""
+    },
+    {
+      "id": 5,
+      "firstName": null,
+      "lastName": null,
+      "class": null,
+      "grade": null
+    },
+    {
+      "id": 6,
+      "firstName": null,
+      "lastName": null,
+      "class": null,
+      "grade": null
+    },
+    {
+      "id": 7,
+      "firstName": "",
+      "lastName": "",
+      "class": "",
+      "grade": ""
     }
   ],
   "comments": [

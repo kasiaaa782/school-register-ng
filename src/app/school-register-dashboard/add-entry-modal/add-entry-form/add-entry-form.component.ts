@@ -34,10 +34,13 @@ export class AddEntryFormComponent implements OnInit {
 		this.api.postEntry(this.entryModelObj).subscribe(
 			(res) => {
 				console.log(res);
-				alert('Wpis utworzony');
+				alert('Wpis utworzony pomyślnie :)');
+				let ref = document.getElementById('cancel');
+				ref?.click();
+				this.formValue.reset();
 			},
 			(err) => {
-				alert('Coś poszło nie tak');
+				alert('Coś poszło nie tak :(');
 			}
 		);
 	}
