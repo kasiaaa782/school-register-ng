@@ -9,8 +9,4 @@ export class HeaderComponent implements OnInit {
 	constructor() {}
 
 	ngOnInit(): void {}
-
-	addEntry(): void {
-		console.log('dodaj wpis');
-	}
 }

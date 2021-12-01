@@ -33,8 +33,8 @@ export default class TableComponent {
 		{
 			uuid: '228ad9ac-5228-11ec-bf63-0242ac130002',
 			lp: '1',
-			name: 'Małgorzata',
-			surname: 'Stańczyk',
+			firstName: 'Małgorzata',
+			lastName: 'Stańczyk',
 			class: '6a',
 			grade: '5',
 		},
