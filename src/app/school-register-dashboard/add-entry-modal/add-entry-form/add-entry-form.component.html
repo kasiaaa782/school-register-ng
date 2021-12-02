@@ -19,12 +19,11 @@
 	</div>
 	<div class="mb-3">
 		<label for="classInput" class="form-label">Klasa</label>
-		<input
-			type="text"
-			formControlName="class"
-			class="form-control"
-			id="classInput"
-		/>
+		<select formControlName="class" class="form-select" id="classInput">
+			<option *ngFor="let item of classList" [ngValue]="item">
+				{{ item }}
+			</option>
+		</select>
 	</div>
 	<div class="mb-3">
 		<label for="gradeInput" class="form-label">Ocena</label>

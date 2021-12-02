@@ -7,16 +7,29 @@
 		</tr>
 	</thead>
 	<tbody>
-		<tr *ngFor="let entry of entriesList">
-			<td>{{ entry.lp }}</td>
+		<tr *ngFor="let entry of entriesList; index as i">
+			<td>{{ i + 1 }}</td>
 			<td>{{ entry.firstName }}</td>
 			<td>{{ entry.lastName }}</td>
 			<td>{{ entry.class }}</td>
 			<td>{{ entry.grade }}</td>
 			<td>
-				<button class="btn btn-primary">Edytuj</button>
-				<button class="btn btn-danger mx-3">Usuń</button>
+				<button
+					data-bs-toggle="modal"
+					data-bs-target="#addEntryModal"
+					class="btn btn-primary"
+					(click)="onEdit(entry)"
+				>
+					Edytuj
+				</button>
+				<button
+					(click)="deleteEntry(entry)"
+					class="btn btn-danger mx-3"
+				>
+					Usuń
+				</button>
 			</td>
 		</tr>
 	</tbody>
 </table>
+<app-add-entry-modal [isAddModal]="isAddModal"></app-add-entry-modal>

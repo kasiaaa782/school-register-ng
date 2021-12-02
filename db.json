@@ -1,18 +1,35 @@
 {
   "posts": [
     {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "comments": [
+      "id": 8,
+      "firstName": "Roman",
+      "lastName": "Kot",
+      "class": "VId",
+      "grade": "3"
+    },
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "id": 9,
+      "firstName": "Ala",
+      "lastName": "Leniar",
+      "class": "VIc",
+      "grade": "4"
+    },
+    {
+      "id": 10,
+      "firstName": "Karol",
+      "lastName": "Majewski",
+      "class": "VIa",
+      "grade": "4"
+    },
+    {
+      "id": 11,
+      "firstName": "Józiu",
+      "lastName": "Sowik",
+      "class": "VIb",
+      "grade": "3,5"
     }
   ],
+  "comments": [],
   "profile": {
     "name": "typicode"
   }
