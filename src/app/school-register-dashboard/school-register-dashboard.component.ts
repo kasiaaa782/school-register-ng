@@ -1,12 +1,27 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
 	selector: 'app-school-register-dashboard',
 	templateUrl: './school-register-dashboard.component.html',
 	styleUrls: ['./school-register-dashboard.component.scss'],
 })
-export class SchoolRegisterDashboardComponent implements OnInit {
-	constructor() {}
+export class SchoolRegisterDashboardComponent {
+	isAddModal = true;
 
-	ngOnInit(): void {}
+	actionForChooseAddModalType = [
+		{
+			onClick: (): void => this.setAddButton(),
+		},
+		{
+			onClick: (): void => this.setUpdateButton(),
+		},
+	];
+
+	setAddButton() {
+		this.isAddModal = true;
+	}
+
+	setUpdateButton() {
+		this.isAddModal = false;
+	}
 }

@@ -1,0 +1,37 @@
+<form [formGroup]="formValue" class="p-2">
+	<div class="mb-3">
+		<label for="firstNameInput" class="form-label">Imię ucznia</label>
+		<input
+			type="text"
+			formControlName="firstName"
+			class="form-control"
+			id="firstNameInput"
+		/>
+	</div>
+	<div class="mb-3">
+		<label for="lastNameInput" class="form-label">Nazwisko ucznia</label>
+		<input
+			type="text"
+			formControlName="lastName"
+			class="form-control"
+			id="lastNameInput"
+		/>
+	</div>
+	<div class="mb-3">
+		<label for="classInput" class="form-label">Klasa</label>
+		<select formControlName="class" class="form-select" id="classInput">
+			<option *ngFor="let item of classList" [ngValue]="item.label">
+				{{ item.label }}
+			</option>
+		</select>
+	</div>
+	<div class="mb-3">
+		<label for="gradeInput" class="form-label">Ocena</label>
+		<input
+			type="text"
+			formControlName="grade"
+			class="form-control"
+			id="gradeInput"
+		/>
+	</div>
+</form>

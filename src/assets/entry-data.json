@@ -1,0 +1,37 @@
+[
+	{
+		"id": 1,
+		"firstName": "Włodziu",
+		"lastName": "Szaranowicz",
+		"class": "VId",
+		"grade": "5"
+	},
+	{
+		"id": 2,
+		"firstName": "Adaś",
+		"lastName": "Małysz",
+		"class": "VIc",
+		"grade": "6"
+	},
+	{
+		"id": 3,
+		"firstName": "Bronek",
+		"lastName": "Stok",
+		"class": "VIa",
+		"grade": "5"
+	},
+	{
+		"id": 4,
+		"firstName": "Stasiu",
+		"lastName": "Rokit",
+		"class": "VIb",
+		"grade": "3,5"
+	},
+	{
+		"id": 5,
+		"firstName": "Józiu",
+		"lastName": "Sowik",
+		"class": "VIb",
+		"grade": "3,5"
+	}
+]
