@@ -1,39 +1,25 @@
 {
   "posts": [
     {
-      "id": 8,
+      "id": 1,
+      "firstName": "Anna",
+      "lastName": "Kowalska",
+      "class": "VIb",
+      "grade": "5"
+    },
+    {
+      "id": 2,
       "firstName": "Roman",
       "lastName": "Kot",
-      "class": "VId",
-      "grade": "2"
-    },
-    {
-      "id": 9,
-      "firstName": "Ala",
-      "lastName": "Leniar",
-      "class": "VIc",
-      "grade": "4"
-    },
-    {
-      "id": 10,
-      "firstName": "Karol",
-      "lastName": "Majewski",
       "class": "VIa",
-      "grade": "2"
-    },
-    {
-      "id": 13,
-      "firstName": "Hania",
-      "lastName": "Niemiec",
-      "class": "VIb",
       "grade": "5,5"
     },
     {
-      "id": 14,
-      "firstName": "Krystian",
-      "lastName": "Szczęśliwy",
-      "class": "VId",
-      "grade": "6"
+      "id": 3,
+      "firstName": "Ala",
+      "lastName": "Leniar",
+      "class": "VIc",
+      "grade": "4,5"
     }
   ],
   "comments": [],

@@ -1,8 +1,10 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
-import { ApiService } from 'src/app/shared/api.service';
-import { EntryModel } from 'src/app/shared/entry.model';
+import { ApiService } from 'src/app/shared/services/api.service';
+import { EntryModel } from 'src/app/shared/models/entry.model';
+import { Label } from 'src/app/shared/interfaces/interfaces';
+import { classList } from 'src/app/shared/data/classList.data';
 
 @Component({
 	selector: 'app-add-entry-form',
@@ -16,7 +18,7 @@ export class AddEntryFormComponent implements OnInit {
 
 	entryModelObj: EntryModel = new EntryModel();
 
-	classList: string[] = ['VIa', 'VIb', 'VIc', 'VId'];
+	classList: Label[] = classList;
 
 	constructor(private formBuilder: FormBuilder, private api: ApiService) {}
 
@@ -32,19 +34,10 @@ export class AddEntryFormComponent implements OnInit {
 		});
 	}
 
-	setInputs(): void {
-		this.entryModelObj.firstName = this.formValue.value.firstName;
-		this.entryModelObj.lastName = this.formValue.value.lastName;
-		this.entryModelObj.class = this.formValue.value.class;
-		this.entryModelObj.grade = this.formValue.value.grade;
-	}
-
 	postEntryDetails(): void {
 		this.setInputs();
-
 		this.api.postEntry(this.entryModelObj).subscribe(
 			(res) => {
-				console.log(res);
 				alert('Wpis utworzony pomyślnie :)');
 				let ref = document.getElementById('cancel');
 				ref?.click();
@@ -57,6 +50,13 @@ export class AddEntryFormComponent implements OnInit {
 		);
 	}
 
+	setInputs(): void {
+		this.entryModelObj.firstName = this.formValue.value.firstName;
+		this.entryModelObj.lastName = this.formValue.value.lastName;
+		this.entryModelObj.class = this.formValue.value.class;
+		this.entryModelObj.grade = this.formValue.value.grade;
+	}
+
 	onEditDefaultProperties(item: EntryModel) {
 		this.entryModelObj.id = item.id;
 		this.formValue.controls['firstName'].setValue(item.firstName);
@@ -67,7 +67,6 @@ export class AddEntryFormComponent implements OnInit {
 
 	updateEntryDetails() {
 		this.setInputs();
-
 		this.api
 			.updateEntry(this.entryModelObj, this.entryModelObj.id)
 			.subscribe((res) => {

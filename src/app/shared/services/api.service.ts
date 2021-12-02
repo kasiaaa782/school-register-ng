@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { map } from 'rxjs';
 
-import { EntryModel } from './entry.model';
+import { EntryModel } from '../models/entry.model';
 
 @Injectable({
 	providedIn: 'root',

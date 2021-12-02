@@ -1,10 +1,10 @@
-import { HttpClient } from '@angular/common/http';
-import { Component, Input, Output, ViewChild } from '@angular/core';
+import { Component, Input, ViewChild } from '@angular/core';
 
-import { ApiService } from 'src/app/shared/api.service';
-import { EntryModel } from 'src/app/shared/entry.model';
-import { Column } from 'src/app/shared/interfaces';
+import { ApiService } from 'src/app/shared/services/api.service';
+import { EntryModel } from 'src/app/shared/models/entry.model';
+import { Label } from 'src/app/shared/interfaces/interfaces';
 import { AddEntryModalComponent } from '../add-entry-modal/add-entry-modal.component';
+import { columns } from 'src/app/shared/data/columns.data';
 
 @Component({
 	selector: 'app-table',
@@ -19,38 +19,19 @@ export class TableComponent {
 
 	@Input() isAddModal: any;
 
+	columns: Label[] = columns;
+
+	entriesList!: EntryModel[];
+
 	updateEntriesList = {
 		onClick: (): void => this.getAllEntries(),
 	};
 
-	columns: Column[] = [
-		{
-			label: 'Lp.',
-		},
-		{
-			label: 'Imię ucznia',
-		},
-		{
-			label: 'Nazwisko ucznia',
-		},
-		{
-			label: 'Klasa',
-		},
-		{
-			label: 'Ocena',
-		},
-		{
-			label: 'Opcje',
-		},
-	];
-
-	entriesList!: EntryModel[];
-
-	constructor(private api: ApiService, private httpClient: HttpClient) {}
+	constructor(private api: ApiService) {}
 
 	ngOnInit(): void {
 		this.getAllEntriesFromFile();
-		//this.getAllEntries();
+		// this.getAllEntries();
 	}
 
 	getAllEntries() {

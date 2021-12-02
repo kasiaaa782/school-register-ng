@@ -20,8 +20,8 @@
 	<div class="mb-3">
 		<label for="classInput" class="form-label">Klasa</label>
 		<select formControlName="class" class="form-select" id="classInput">
-			<option *ngFor="let item of classList" [ngValue]="item">
-				{{ item }}
+			<option *ngFor="let item of classList" [ngValue]="item.label">
+				{{ item.label }}
 			</option>
 		</select>
 	</div>
