@@ -1,60 +1,35 @@
 {
   "posts": [
     {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
+      "id": 8,
+      "firstName": "Roman",
+      "lastName": "Kot",
+      "class": "VId",
+      "grade": "3"
     },
     {
-      "id": 2,
-      "firstName": "Anna",
-      "lastName": "Kowalska",
-      "class": "5a",
-      "grade": "5"
+      "id": 9,
+      "firstName": "Ala",
+      "lastName": "Leniar",
+      "class": "VIc",
+      "grade": "4"
     },
     {
-      "id": 3,
-      "firstName": "Piotr",
-      "lastName": "Nowak",
-      "class": "5a",
-      "grade": "4,5"
+      "id": 10,
+      "firstName": "Karol",
+      "lastName": "Majewski",
+      "class": "VIa",
+      "grade": "4"
     },
     {
-      "id": 4,
-      "firstName": "",
-      "lastName": "",
-      "class": "",
-      "grade": ""
-    },
-    {
-      "id": 5,
-      "firstName": null,
-      "lastName": null,
-      "class": null,
-      "grade": null
-    },
-    {
-      "id": 6,
-      "firstName": null,
-      "lastName": null,
-      "class": null,
-      "grade": null
-    },
-    {
-      "id": 7,
-      "firstName": "",
-      "lastName": "",
-      "class": "",
-      "grade": ""
+      "id": 11,
+      "firstName": "Józiu",
+      "lastName": "Sowik",
+      "class": "VIb",
+      "grade": "3,5"
     }
   ],
-  "comments": [
-    {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
-    }
-  ],
+  "comments": [],
   "profile": {
     "name": "typicode"
   }

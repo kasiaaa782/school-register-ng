@@ -1,7 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, Input, SimpleChanges, ViewChild } from '@angular/core';
 
+import { ApiService } from 'src/app/shared/api.service';
 import { EntryModel } from 'src/app/shared/entry.model';
 import { Column } from 'src/app/shared/interfaces';
+import { AddEntryModalComponent } from '../add-entry-modal/add-entry-modal.component';
 
 @Component({
 	selector: 'app-table',
@@ -9,7 +11,17 @@ import { Column } from 'src/app/shared/interfaces';
 	styleUrls: ['./table.component.scss'],
 })
 export class TableComponent {
+	@ViewChild(AddEntryModalComponent)
+	addEntryModalComponent!: AddEntryModalComponent;
+
+	@Input() actionForChooseAddModalType: any;
+
+	@Input() isAddModal: any;
+
 	columns: Column[] = [
+		{
+			label: 'Lp.',
+		},
 		{
 			label: 'Imię ucznia',
 		},
@@ -27,13 +39,29 @@ export class TableComponent {
 		},
 	];
 
-	entriesList: EntryModel[] = [
-		{
-			id: 1,
-			firstName: 'Małgorzata',
-			lastName: 'Stańczyk',
-			class: '6a',
-			grade: '5',
-		},
-	];
+	entriesList!: EntryModel[];
+
+	constructor(private api: ApiService) {}
+
+	ngOnInit(): void {
+		this.getAllEntries();
+	}
+
+	getAllEntries() {
+		this.api.getEntries().subscribe((res) => {
+			this.entriesList = res;
+		});
+	}
+
+	deleteEntry(entry: EntryModel) {
+		this.api.deleteEntry(entry.id).subscribe((res) => {
+			alert('Usunięto pomyślnie');
+			this.getAllEntries();
+		});
+	}
+
+	onEdit(item: EntryModel) {
+		this.actionForChooseAddModalType[1].onClick();
+		this.addEntryModalComponent.onEdit(item);
+	}
 }

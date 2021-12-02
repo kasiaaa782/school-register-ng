@@ -16,6 +16,7 @@
 					class="btn-close"
 					data-bs-dismiss="modal"
 					aria-label="Close"
+					(click)="resetForm()"
 				></button>
 			</div>
 			<div class="modal-body p-4">
@@ -27,15 +28,25 @@
 					id="cancel"
 					class="btn btn-secondary"
 					data-bs-dismiss="modal"
+					(click)="resetForm()"
 				>
 					Zamknij
 				</button>
 				<button
+					*ngIf="isAddModal"
 					(click)="addEntry()"
 					type="button"
 					class="btn btn-primary"
 				>
 					Dodaj
+				</button>
+				<button
+					*ngIf="!isAddModal"
+					(click)="updateEntry()"
+					type="button"
+					class="btn btn-primary"
+				>
+					Aktualizuj dane
 				</button>
 			</div>
 		</div>
