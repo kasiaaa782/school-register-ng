@@ -1,0 +1,56 @@
+<div
+	class="modal fade"
+	id="addEntryModal"
+	tabindex="-1"
+	aria-labelledby="addEntryModalLabel"
+	aria-hidden="true"
+>
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header p-4">
+				<h5 class="modal-title" id="addEntryModalLabel">
+					Szczegóły wpisu
+				</h5>
+				<button
+					type="button"
+					class="btn-close"
+					data-bs-dismiss="modal"
+					aria-label="Close"
+					(click)="resetForm()"
+				></button>
+			</div>
+			<div class="modal-body p-4">
+				<app-add-entry-form
+					[updateEntriesList]="updateEntriesList"
+				></app-add-entry-form>
+			</div>
+			<div class="modal-footer p-4">
+				<button
+					type="button"
+					id="cancel"
+					class="btn btn-secondary"
+					data-bs-dismiss="modal"
+					(click)="resetForm()"
+				>
+					Zamknij
+				</button>
+				<button
+					*ngIf="isAddModal"
+					(click)="addEntry()"
+					type="button"
+					class="btn btn-primary"
+				>
+					Dodaj
+				</button>
+				<button
+					*ngIf="!isAddModal"
+					(click)="updateEntry()"
+					type="button"
+					class="btn btn-primary"
+				>
+					Aktualizuj dane
+				</button>
+			</div>
+		</div>
+	</div>
+</div>

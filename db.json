@@ -1,0 +1,29 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "firstName": "Anna",
+      "lastName": "Kowalska",
+      "class": "VIb",
+      "grade": "5"
+    },
+    {
+      "id": 2,
+      "firstName": "Roman",
+      "lastName": "Kot",
+      "class": "VIa",
+      "grade": "5,5"
+    },
+    {
+      "id": 3,
+      "firstName": "Ala",
+      "lastName": "Leniar",
+      "class": "VIc",
+      "grade": "4,5"
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}
