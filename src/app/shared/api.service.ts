@@ -28,6 +28,14 @@ export class ApiService {
 		);
 	}
 
+	getEntriesFromFile() {
+		return this.http.get<EntryModel>('../assets/entry-data.json').pipe(
+			map((res: any) => {
+				return res;
+			})
+		);
+	}
+
 	updateEntry(data: EntryModel, id: number) {
 		return this.http
 			.put<EntryModel>('http://localhost:3000/posts/' + id, data)

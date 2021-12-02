@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 import { ApiService } from 'src/app/shared/api.service';
@@ -10,6 +10,8 @@ import { EntryModel } from 'src/app/shared/entry.model';
 	styleUrls: ['./add-entry-form.component.scss'],
 })
 export class AddEntryFormComponent implements OnInit {
+	@Input() updateEntriesList: any;
+
 	formValue!: FormGroup;
 
 	entryModelObj: EntryModel = new EntryModel();
@@ -47,7 +49,7 @@ export class AddEntryFormComponent implements OnInit {
 				let ref = document.getElementById('cancel');
 				ref?.click();
 				this.formValue.reset();
-				location.reload();
+				this.updateEntriesList.onClick();
 			},
 			(err) => {
 				alert('Coś poszło nie tak :(');
@@ -73,7 +75,7 @@ export class AddEntryFormComponent implements OnInit {
 				let ref = document.getElementById('cancel');
 				ref?.click();
 				this.formValue.reset();
-				location.reload();
+				this.updateEntriesList.onClick();
 			});
 	}
 }

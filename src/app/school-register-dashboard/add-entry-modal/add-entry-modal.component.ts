@@ -14,6 +14,8 @@ export class AddEntryModalComponent {
 
 	@Input() isAddModal: any;
 
+	@Input() updateEntriesList: any;
+
 	onEdit(item: EntryModel) {
 		this.addEntryFormComponent.onEditDefaultProperties(item);
 	}

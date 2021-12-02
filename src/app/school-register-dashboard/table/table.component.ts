@@ -1,4 +1,5 @@
-import { Component, Input, SimpleChanges, ViewChild } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Component, Input, Output, ViewChild } from '@angular/core';
 
 import { ApiService } from 'src/app/shared/api.service';
 import { EntryModel } from 'src/app/shared/entry.model';
@@ -17,6 +18,10 @@ export class TableComponent {
 	@Input() actionForChooseAddModalType: any;
 
 	@Input() isAddModal: any;
+
+	updateEntriesList = {
+		onClick: (): void => this.getAllEntries(),
+	};
 
 	columns: Column[] = [
 		{
@@ -41,14 +46,21 @@ export class TableComponent {
 
 	entriesList!: EntryModel[];
 
-	constructor(private api: ApiService) {}
+	constructor(private api: ApiService, private httpClient: HttpClient) {}
 
 	ngOnInit(): void {
-		this.getAllEntries();
+		this.getAllEntriesFromFile();
+		//this.getAllEntries();
 	}
 
 	getAllEntries() {
 		this.api.getEntries().subscribe((res) => {
+			this.entriesList = res;
+		});
+	}
+
+	getAllEntriesFromFile() {
+		this.api.getEntriesFromFile().subscribe((res) => {
 			this.entriesList = res;
 		});
 	}

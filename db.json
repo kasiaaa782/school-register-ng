@@ -5,7 +5,7 @@
       "firstName": "Roman",
       "lastName": "Kot",
       "class": "VId",
-      "grade": "3"
+      "grade": "2"
     },
     {
       "id": 9,
@@ -19,14 +19,21 @@
       "firstName": "Karol",
       "lastName": "Majewski",
       "class": "VIa",
-      "grade": "4"
+      "grade": "2"
     },
     {
-      "id": 11,
-      "firstName": "Józiu",
-      "lastName": "Sowik",
+      "id": 13,
+      "firstName": "Hania",
+      "lastName": "Niemiec",
       "class": "VIb",
-      "grade": "3,5"
+      "grade": "5,5"
+    },
+    {
+      "id": 14,
+      "firstName": "Krystian",
+      "lastName": "Szczęśliwy",
+      "class": "VId",
+      "grade": "6"
     }
   ],
   "comments": [],
